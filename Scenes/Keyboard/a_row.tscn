@@ -51,9 +51,9 @@ region_rect = Rect2(0, 26, 13, 12)
 [node name="Sprite2D" parent="L" index="0" unique_id=726858926]
 region_rect = Rect2(14, 26, 13, 12)
 
-[node name=";" parent="." unique_id=1417331160 instance=ExtResource("1_mtn4w")]
+[node name="Semicolon" parent="." unique_id=1417331160 instance=ExtResource("1_mtn4w")]
 
-[node name="Sprite2D" parent=";" index="0" unique_id=726858926]
+[node name="Sprite2D" parent="Semicolon" index="0" unique_id=726858926]
 region_rect = Rect2(42, 0, 13, 12)
 
 [editable path="A"]
@@ -65,4 +65,4 @@ region_rect = Rect2(42, 0, 13, 12)
 [editable path="J"]
 [editable path="K"]
 [editable path="L"]
-[editable path=";"]
+[editable path="Semicolon"]

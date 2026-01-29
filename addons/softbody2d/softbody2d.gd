@@ -1071,6 +1071,7 @@ var _hinges_distances_squared := Dictionary()
 func _ready():
 	if Engine.is_editor_hint():
 		return
+	
 	_update_vars()
 
 func _update_vars():

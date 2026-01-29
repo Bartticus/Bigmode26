@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c47774xsx4ej2"]
 
-[ext_resource type="Texture2D" uid="uid://0ts8n6m43hkh" path="res://assets/sprites/FullKeyboardWithNumbers.png" id="1_yk2u2"]
+[ext_resource type="Script" uid="uid://m5f1fqhqwv28" path="res://Scenes/Keyboard/key.gd" id="1_q12lb"]
+[ext_resource type="Texture2D" uid="uid://0ts8n6m43hkh" path="res://Assets/Sprites/FullKeyboardWithNumbers.png" id="1_yk2u2"]
+[ext_resource type="Texture2D" uid="uid://cyknlaunbfgpd" path="res://icon.svg" id="3_iup0k"]
 
 [node name="Key" type="Node2D" unique_id=1531063233]
+script = ExtResource("1_q12lb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=726858926]
 scale = Vector2(3, 3)
@@ -10,3 +13,9 @@ texture = ExtResource("1_yk2u2")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 13, 12)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1584370002]
+position = Vector2(20, 15)
+enabled = false
+energy = 4.8
+texture = ExtResource("3_iup0k")

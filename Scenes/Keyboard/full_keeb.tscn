@@ -10,8 +10,8 @@
 script = ExtResource("1_pfsk0")
 x_spacing = 192.0
 x_offset = 83.0
-y_spacing = 150.0
-y_offset = 100.0
+y_spacing = 300.0
+y_offset = 70.0
 snap_keys_to_position = true
 
 [node name="NumberRow" parent="." unique_id=1030793946 instance=ExtResource("2_2txns")]
