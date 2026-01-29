@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://26rt0dqvuupo"]
+
+[ext_resource type="PackedScene" uid="uid://c47774xsx4ej2" path="res://Scenes/Keyboard/key.tscn" id="1_mtn4w"]
+[ext_resource type="Script" uid="uid://b60dkqnc6d2d7" path="res://Scripts/Keyboard/full_row.gd" id="1_xna1i"]
+
+[node name="ARow" type="Node2D" unique_id=1742281654]
+script = ExtResource("1_xna1i")
+
+[node name="A" parent="." unique_id=1531063233 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="A" index="0" unique_id=726858926]
+region_rect = Rect2(56, 0, 13, 12)
+
+[node name="S" parent="." unique_id=1615329120 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="S" index="0" unique_id=726858926]
+region_rect = Rect2(14, 39, 13, 12)
+
+[node name="D" parent="." unique_id=225352611 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="D" index="0" unique_id=726858926]
+region_rect = Rect2(0, 13, 13, 12)
+
+[node name="F" parent="." unique_id=314082641 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="F" index="0" unique_id=726858926]
+region_rect = Rect2(28, 13, 13, 12)
+
+[node name="G" parent="." unique_id=1384724601 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="G" index="0" unique_id=726858926]
+region_rect = Rect2(42, 13, 13, 12)
+
+[node name="H" parent="." unique_id=1088535450 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="H" index="0" unique_id=726858926]
+region_rect = Rect2(56, 13, 13, 12)
+
+[node name="J" parent="." unique_id=1034136818 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="J" index="0" unique_id=726858926]
+region_rect = Rect2(84, 13, 13, 12)
+
+[node name="K" parent="." unique_id=409903911 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="K" index="0" unique_id=726858926]
+region_rect = Rect2(0, 26, 13, 12)
+
+[node name="L" parent="." unique_id=2137765974 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent="L" index="0" unique_id=726858926]
+region_rect = Rect2(14, 26, 13, 12)
+
+[node name=";" parent="." unique_id=1417331160 instance=ExtResource("1_mtn4w")]
+
+[node name="Sprite2D" parent=";" index="0" unique_id=726858926]
+region_rect = Rect2(42, 0, 13, 12)
+
+[editable path="A"]
+[editable path="S"]
+[editable path="D"]
+[editable path="F"]
+[editable path="G"]
+[editable path="H"]
+[editable path="J"]
+[editable path="K"]
+[editable path="L"]
+[editable path=";"]

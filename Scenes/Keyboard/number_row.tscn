@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://di2kw33bow2ko"]
+
+[ext_resource type="Script" uid="uid://b60dkqnc6d2d7" path="res://Scripts/Keyboard/full_row.gd" id="1_glxqx"]
+[ext_resource type="PackedScene" uid="uid://c47774xsx4ej2" path="res://Scenes/Keyboard/key.tscn" id="2_2p85f"]
+
+[node name="NumberRow" type="Node2D" unique_id=1030793946]
+script = ExtResource("1_glxqx")
+
+[node name="1" parent="." unique_id=1531063233 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="1" index="0" unique_id=726858926]
+region_rect = Rect2(28, 52, 13, 12)
+
+[node name="2" parent="." unique_id=603913199 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="2" index="0" unique_id=726858926]
+region_rect = Rect2(42, 52, 13, 12)
+
+[node name="3" parent="." unique_id=2117734714 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="3" index="0" unique_id=726858926]
+region_rect = Rect2(56, 52, 13, 12)
+
+[node name="4" parent="." unique_id=1763821394 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="4" index="0" unique_id=726858926]
+region_rect = Rect2(70, 52, 13, 12)
+
+[node name="5" parent="." unique_id=1122392763 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="5" index="0" unique_id=726858926]
+region_rect = Rect2(84, 52, 13, 12)
+
+[node name="6" parent="." unique_id=1528212326 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="6" index="0" unique_id=726858926]
+region_rect = Rect2(0, 65, 13, 12)
+
+[node name="7" parent="." unique_id=377217101 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="7" index="0" unique_id=726858926]
+region_rect = Rect2(14, 65, 13, 12)
+
+[node name="8" parent="." unique_id=1879234845 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="8" index="0" unique_id=726858926]
+region_rect = Rect2(28, 65, 13, 12)
+
+[node name="9" parent="." unique_id=1187507472 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="9" index="0" unique_id=726858926]
+region_rect = Rect2(42, 65, 13, 12)
+
+[node name="0" parent="." unique_id=662353016 instance=ExtResource("2_2p85f")]
+
+[node name="Sprite2D" parent="0" index="0" unique_id=726858926]
+region_rect = Rect2(56, 65, 13, 12)
+
+[editable path="1"]
+[editable path="2"]
+[editable path="3"]
+[editable path="4"]
+[editable path="5"]
+[editable path="6"]
+[editable path="7"]
+[editable path="8"]
+[editable path="9"]
+[editable path="0"]

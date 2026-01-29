@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://taej6wdaex46"]
+
+[ext_resource type="Script" uid="uid://b60dkqnc6d2d7" path="res://Scripts/Keyboard/full_row.gd" id="1_jj4lu"]
+[ext_resource type="PackedScene" uid="uid://c47774xsx4ej2" path="res://Scenes/Keyboard/key.tscn" id="1_w86a2"]
+
+[node name="ZRow" type="Node2D" unique_id=553454933]
+script = ExtResource("1_jj4lu")
+
+[node name="Z" parent="." unique_id=1531063233 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="Z" index="0" unique_id=726858926]
+region_rect = Rect2(14, 52, 13, 12)
+
+[node name="X" parent="." unique_id=401776612 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="X" index="0" unique_id=726858926]
+region_rect = Rect2(84, 39, 13, 12)
+
+[node name="C" parent="." unique_id=1545316328 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="C" index="0" unique_id=726858926]
+region_rect = Rect2(84, 0, 13, 12)
+
+[node name="V" parent="." unique_id=1444083625 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="V" index="0" unique_id=726858926]
+region_rect = Rect2(56, 39, 13, 12)
+
+[node name="B" parent="." unique_id=419192140 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="B" index="0" unique_id=726858926]
+region_rect = Rect2(70, 0, 13, 12)
+
+[node name="N" parent="." unique_id=1550661500 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="N" index="0" unique_id=726858926]
+region_rect = Rect2(42, 26, 13, 12)
+
+[node name="M" parent="." unique_id=487900940 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="M" index="0" unique_id=726858926]
+region_rect = Rect2(28, 26, 13, 12)
+
+[node name="Comma" parent="." unique_id=1211108258 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="Comma" index="0" unique_id=726858926]
+region_rect = Rect2(28, 0, 13, 12)
+
+[node name="Period" parent="." unique_id=183745101 instance=ExtResource("1_w86a2")]
+
+[node name="Sprite2D" parent="Period" index="0" unique_id=726858926]
+region_rect = Rect2(14, 0, 13, 12)
+
+[node name="Slash" parent="." unique_id=1037685573 instance=ExtResource("1_w86a2")]
+
+[editable path="Z"]
+[editable path="X"]
+[editable path="C"]
+[editable path="V"]
+[editable path="B"]
+[editable path="N"]
+[editable path="M"]
+[editable path="Comma"]
+[editable path="Period"]
+[editable path="Slash"]
