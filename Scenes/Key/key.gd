@@ -1,23 +1,35 @@
 extends Node2D
 
 var current_body: RigidBody2D
+var dist_to_current_body: float
+@export var max_tug_distance: float = 300
+
+enum Status { IDLE, TUGGING }
+# Every time the 'status' is set, set_status will run and perform any side effects for the new status
+var status: Status = Status.IDLE : set = set_status
+
+func set_status(new_status) -> void:
+	status = new_status
+	match status:
+		Status.IDLE:
+			$PointLight2D.enabled = false
+			current_body = null
+
+		Status.TUGGING:
+			$PointLight2D.enabled = true
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.is_pressed() and not event.is_echo():
+	if event is InputEventKey and event.is_pressed():
 		var key_string: String = OS.get_keycode_string(event.keycode)
 		if key_string == name:
-			$PointLight2D.enabled = true
-			
-			current_body = find_closest_body()
-
+			status = Status.TUGGING
 	
 	if event is InputEventKey and event.is_released():
 		var key_string: String = OS.get_keycode_string(event.keycode)
 		if key_string == name:
-			$PointLight2D.enabled = false
-			current_body = null
+			status = Status.IDLE
 
-func find_closest_body() -> RigidBody2D:
+func find_closest_body() -> void:
 	var closest_body: RigidBody2D
 	var shortest_dist: float
 	
@@ -33,9 +45,19 @@ func find_closest_body() -> RigidBody2D:
 				shortest_dist = temp
 				closest_body = body
 			
-	return closest_body
+	current_body = closest_body
+	dist_to_current_body = shortest_dist
+
+func find_and_tug_target() -> void:
+	find_closest_body()
+	current_body.apply_force(current_body.global_position.direction_to(global_position) * 1000)
+
+# func calculate_tugging_power() -> float:
+
+# 	var power = max_tug_distance / dist_to_current_body
 
 func _physics_process(_delta: float) -> void:
-	if current_body:
-		current_body.apply_force(current_body.global_position.direction_to(global_position) * 1000)
-	
+	match status:
+		Status.TUGGING:
+			print(dist_to_current_body)
+			find_and_tug_target()		
