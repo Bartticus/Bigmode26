@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://52ro6nedl6xk"]
+
+[ext_resource type="PackedScene" uid="uid://cr42tlugxlrv2" path="res://Scenes/Blob/blob.tscn" id="1_a3d8c"]
+[ext_resource type="PackedScene" uid="uid://k4t3x6l127e8" path="res://Scenes/FullKeeb/full_keeb.tscn" id="2_xpcdj"]
+
+[node name="Player" type="Node2D" unique_id=1532672995]
+
+[node name="Blob" parent="." unique_id=104221436 instance=ExtResource("1_a3d8c")]
+rotation = 1.5707964
+scale = Vector2(3.22, 3.22)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Blob" unique_id=759139147]
+remote_path = NodePath("../../FullKeeb")
+update_rotation = false
+update_scale = false
+
+[node name="FullKeeb" parent="." unique_id=339941415 instance=ExtResource("2_xpcdj")]

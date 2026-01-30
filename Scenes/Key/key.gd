@@ -68,4 +68,4 @@ func calculate_tugging_power() -> float:
 func _physics_process(_delta: float) -> void:
 	match status:
 		Status.TUGGING:
-			find_and_tug_target()		
+			find_and_tug_target()

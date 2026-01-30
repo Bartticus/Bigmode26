@@ -18,3 +18,4 @@ shape = SubResource("WorldBoundaryShape2D_amr5s")
 [node name="FullKeeb" parent="." unique_id=339941415 instance=ExtResource("3_qw60k")]
 
 [node name="Blob" parent="." unique_id=104221436 instance=ExtResource("2_lixft")]
+position = Vector2(183, 170)
