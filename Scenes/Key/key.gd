@@ -1,8 +1,11 @@
 extends Node2D
 
+@export var max_tug_distance: float = 800
+@export var max_tug_power: float = 2500
+@export var tug_decay: float = 2.5
+
 var current_body: RigidBody2D
 var dist_to_current_body: float
-@export var max_tug_distance: float = 300
 
 enum Status { IDLE, TUGGING }
 # Every time the 'status' is set, set_status will run and perform any side effects for the new status
@@ -50,14 +53,19 @@ func find_closest_body() -> void:
 
 func find_and_tug_target() -> void:
 	find_closest_body()
-	current_body.apply_force(current_body.global_position.direction_to(global_position) * 1000)
+	current_body.apply_force(current_body.global_position.direction_to(global_position) * calculate_tugging_power())
 
-# func calculate_tugging_power() -> float:
+# Tugging power drops off exponentially
+func calculate_tugging_power() -> float:
+	if (dist_to_current_body >= max_tug_distance):
+		return 0
 
-# 	var power = max_tug_distance / dist_to_current_body
+	var power_multiplier = dist_to_current_body / max_tug_distance
+	var tugging_power = max_tug_power * exp(-tug_decay * power_multiplier)
+	print(tugging_power)
+	return tugging_power
 
 func _physics_process(_delta: float) -> void:
 	match status:
 		Status.TUGGING:
-			print(dist_to_current_body)
 			find_and_tug_target()		
