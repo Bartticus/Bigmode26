@@ -35,5 +35,5 @@ func set_key_positions():
 func _ready() -> void:
 	set_key_positions()
 
-func _process(delta: float) -> void:
-	set_key_positions()
+# func _process(delta: float) -> void:
+	# set_key_positions()

@@ -62,7 +62,7 @@ func calculate_tugging_power() -> float:
 
 	var power_multiplier = dist_to_current_body / max_tug_distance
 	var tugging_power = max_tug_power * exp(-tug_decay * power_multiplier)
-	print(tugging_power)
+	# print(tugging_power)
 	return tugging_power
 
 func _physics_process(_delta: float) -> void:

@@ -10,4 +10,6 @@ func _ready() -> void:
 	for child in softbody.get_children():
 		if child is RigidBody2D:
 			bodies.append(child)
-	
+		
+func _process(delta: float) -> void:
+	print($"Egg/Bone-0".global_position)
