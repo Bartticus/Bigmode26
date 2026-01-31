@@ -1,11 +1,12 @@
 extends Node2D
 
 @export var max_tug_distance: float = 800
-@export var max_tug_power: float = 2500
+@export var max_tug_power: float = 3000
 @export var tug_decay: float = 2.5
 
 var current_body: RigidBody2D
 var dist_to_current_body: float
+static var tugged_bodies: Array = [RigidBody2D]
 
 enum Status { IDLE, TUGGING }
 # Every time the 'status' is set, set_status will run and perform any side effects for the new status
@@ -16,10 +17,14 @@ func set_status(new_status) -> void:
 	match status:
 		Status.IDLE:
 			$PointLight2D.enabled = false
+			
+			if tugged_bodies.has(current_body):
+				tugged_bodies.erase(current_body)
 			current_body = null
 
 		Status.TUGGING:
 			$PointLight2D.enabled = true
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed():
@@ -38,6 +43,9 @@ func find_closest_body() -> void:
 	
 	for body in Global.blob.bodies:
 		if body is RigidBody2D:
+			if tugged_bodies.has(body):
+				continue
+			
 			var temp: float = global_position.distance_to(body.global_position)
 			
 			if shortest_dist == 0:
@@ -47,7 +55,13 @@ func find_closest_body() -> void:
 			if temp < shortest_dist:
 				shortest_dist = temp
 				closest_body = body
-			
+	
+	if current_body != closest_body:
+		if tugged_bodies.has(current_body):
+			tugged_bodies.erase(current_body)
+		else:
+			tugged_bodies.append(closest_body)
+	
 	current_body = closest_body
 	dist_to_current_body = shortest_dist
 
@@ -69,3 +83,4 @@ func _physics_process(_delta: float) -> void:
 	match status:
 		Status.TUGGING:
 			find_and_tug_target()
+			print(tugged_bodies)
