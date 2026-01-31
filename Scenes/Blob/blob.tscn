@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bf75the2m1kad" path="res://Scenes/Blob/blob.gd" id="1_u3aeq"]
 [ext_resource type="Texture2D" uid="uid://dam4acfx4sb8a" path="res://Assets/samples/softbody2d/Boiled_Egg_Half.png" id="2_47mic"]
 [ext_resource type="Script" uid="uid://kol6k5y6rb8a" path="res://addons/softbody2d/softbody2d.gd" id="2_hkw75"]
+[ext_resource type="Script" uid="uid://c0wp4bnwvy7ol" path="res://Scenes/Blob/bone.gd" id="4_47mic"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_hkw75"]
 resource_local_to_scene = true
@@ -411,6 +412,7 @@ softbody = NodePath("Egg")
 
 [node name="Egg" type="Polygon2D" parent="." unique_id=1952859083]
 position = Vector2(-95, -141)
+color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 texture = ExtResource("2_47mic")
 skeleton = NodePath("Skeleton2D")
 polygon = PackedVector2Array(81, 11, 75, 13, 72, 13, 64, 19, 62, 19, 49, 32, 48, 32, 48, 34, 44, 38, 43, 38, 43, 40, 41, 42, 40, 42, 33, 55, 32, 55, 29, 63, 28, 63, 28, 66, 26, 70, 25, 70, 23, 77, 22, 77, 22, 81, 21, 83, 20, 83, 18, 91, 17, 91, 11, 119, 10, 119, 7, 138, 7, 166, 10, 181, 10, 186, 18, 202, 18, 204, 22, 208, 22, 210, 28, 215, 28, 217, 43, 230, 43, 231, 45, 231, 47, 233, 47, 234, 53, 237, 53, 238, 61, 241, 61, 242, 77, 246, 77, 247, 89, 248, 89, 249, 106, 249, 114, 247, 120, 247, 134, 242, 137, 242, 141, 239, 144, 239, 156, 230, 158, 230, 167, 221, 168, 221, 172, 214, 173, 214, 176, 206, 177, 206, 179, 198, 180, 198, 182, 175, 183, 175, 182, 152, 182, 143, 177, 119, 177, 114, 174, 107, 174, 103, 169, 92, 169, 89, 160, 72, 160, 69, 151, 54, 151, 52, 148, 49, 148, 47, 141, 39, 141, 37, 128, 25, 128, 24, 121, 20, 121, 19, 108, 14, 108, 13, 98, 11, 98, 10, 81, 10, 43.30127, 60, 34.64102, 75, 23.571426, 75, 25, 70, 26, 70, 28, 66, 28, 63, 29, 63, 32, 55, 33, 55, 36.57805, 48.35504, 43.30127, 90, 34.64102, 105, 17.32051, 105, 14.898819, 100.805504, 17, 91, 18, 91, 20, 83, 21, 83, 22, 81, 22, 77, 23, 77, 23.571426, 75, 34.64102, 75, 43.30127, 120, 34.64102, 135, 17.32051, 135, 9.588295, 121.60742, 10, 119, 11, 119, 12.040184, 114.14578, 17.32051, 105, 34.64102, 105, 17.32051, 105, 12.040184, 114.14578, 14.898819, 100.805504, 43.30127, 150, 34.64102, 165, 17.32051, 165, 8.660255, 150, 17.32051, 135, 34.64102, 135, 17.32051, 135, 8.660255, 150, 7, 150, 7, 138, 9.588295, 121.60742, 17.32051, 165, 9.50676, 178.53381, 7, 166, 7, 150, 8.660255, 150, 43.30127, 180, 34.64102, 195, 17.32051, 195, 10, 182.3205, 10, 181, 9.50676, 178.53381, 17.32051, 165, 34.64102, 165, 17.32051, 195, 15.808998, 197.61801, 10, 186, 10, 182.3205, 43.30127, 210, 35.504692, 223.50406, 28, 217, 28, 215, 22, 210, 22, 208, 18, 204, 18, 202, 15.808998, 197.61801, 17.32051, 195, 34.64102, 195, 95.262794, 30, 86.60254, 45, 69.28203, 45, 60.621773, 30, 69.28203, 15, 86.60254, 15, 86.60254, 15, 69.333336, 15, 72, 13, 75, 13, 81, 11, 81, 10, 89.48929, 10, 60.62178, 30, 51, 30, 62, 19, 64, 19, 69.24286, 15.067848, 69.282036, 45, 60.62178, 60, 43.30127, 60, 36.57805, 48.35504, 40, 42, 41, 42, 43, 40, 43, 38, 44, 38, 48, 34, 48, 32, 49, 32, 51, 30, 60.62178, 30, 95.262794, 60, 86.60254, 75, 69.28203, 75, 60.621773, 60, 69.28203, 45, 86.60254, 45, 69.282036, 75, 60.62178, 90, 43.30127, 90, 34.641014, 75, 43.30127, 60, 60.62178, 60, 95.262794, 90, 86.60254, 105, 69.28203, 105, 60.621773, 90, 69.28203, 75, 86.60254, 75, 69.282036, 105, 60.62178, 120, 43.30127, 120, 34.641014, 105, 43.30127, 90, 60.62178, 90, 95.262794, 120, 86.60254, 135, 69.28203, 135, 60.621773, 120, 69.28203, 105, 86.60254, 105, 69.282036, 135, 60.62178, 150, 43.30127, 150, 34.641014, 135, 43.30127, 120, 60.62178, 120, 95.262794, 150, 86.60254, 165, 69.28203, 165, 60.621773, 150, 69.28203, 135, 86.60254, 135, 69.282036, 165, 60.62178, 180, 43.30127, 180, 34.641014, 165, 43.30127, 150, 60.62178, 150, 95.262794, 180, 86.60254, 195, 69.28203, 195, 60.621773, 180, 69.28203, 165, 86.60254, 165, 69.282036, 195, 60.62178, 210, 43.30127, 210, 34.641014, 195, 43.30127, 180, 60.62178, 180, 95.262794, 210, 86.60254, 225, 69.28203, 225, 60.621773, 210, 69.28203, 195, 86.60254, 195, 69.282036, 225, 60.62178, 240, 58.333336, 240, 53, 238, 53, 237, 47, 234, 47, 233, 45, 231, 43, 231, 43, 230, 35.504684, 223.50406, 43.30127, 210, 60.62178, 210, 61.907455, 242.22687, 61, 242, 61, 241, 58.333336, 240, 60.62178, 240, 95.262794, 240, 90.06664, 249, 89, 249, 89, 248, 77, 247, 77, 246, 61.907448, 242.22687, 60.621773, 240, 69.28203, 225, 86.60254, 225, 98, 11, 108, 13, 108, 14, 119.30953, 18.349815, 112.583305, 30, 95.262794, 30, 86.60254, 15, 89.48929, 10, 98, 10, 121, 19, 121, 20, 128, 24, 128, 25, 141, 37, 141, 39, 141.61943, 39.707924, 138.56406, 45, 121.24355, 45, 112.5833, 30, 119.30953, 18.349815, 121.24356, 45, 112.583305, 60, 95.262794, 60, 86.60254, 45, 95.262794, 30, 112.583305, 30, 147.22432, 60, 138.56406, 75, 121.24355, 75, 112.5833, 60, 121.24355, 45, 138.56406, 45, 148, 47, 148, 49, 151, 52, 151, 54, 154.6, 60, 147.22432, 60, 138.56406, 45, 141.61943, 39.707924, 121.24356, 75, 112.583305, 90, 95.262794, 90, 86.60254, 75, 95.262794, 60, 112.583305, 60, 147.22432, 90, 138.56406, 105, 121.24355, 105, 112.5833, 90, 121.24355, 75, 138.56406, 75, 121.24356, 105, 112.583305, 120, 95.262794, 120, 86.60254, 105, 95.262794, 90, 112.583305, 90, 147.22432, 120, 138.56406, 135, 121.24355, 135, 112.5833, 120, 121.24355, 105, 138.56406, 105, 121.24356, 135, 112.583305, 150, 95.262794, 150, 86.60254, 135, 95.262794, 120, 112.583305, 120, 147.22432, 150, 138.56406, 165, 121.24355, 165, 112.5833, 150, 121.24355, 135, 138.56406, 135, 121.24356, 165, 112.583305, 180, 95.262794, 180, 86.60254, 165, 95.262794, 150, 112.583305, 150, 147.22432, 180, 138.56406, 195, 121.24355, 195, 112.5833, 180, 121.24355, 165, 138.56406, 165, 121.24356, 195, 112.583305, 210, 95.262794, 210, 86.60254, 195, 95.262794, 180, 112.583305, 180, 147.22432, 210, 138.56406, 225, 121.24355, 225, 112.5833, 210, 121.24355, 195, 138.56406, 195, 121.24356, 225, 112.583305, 240, 95.262794, 240, 86.60254, 225, 95.262794, 210, 112.583305, 210, 145.84714, 237.61465, 144, 239, 141, 239, 137, 242, 134, 242, 120, 247, 116.62475, 247, 112.5833, 240, 121.24355, 225, 138.56406, 225, 116.624756, 247, 114, 247, 106, 249, 90.06664, 249, 95.262794, 240, 112.583305, 240, 160, 69, 160, 72, 167.14507, 85.49623, 164.54482, 90, 147.22432, 90, 138.56406, 75, 147.22432, 60, 154.6, 60, 173.20508, 105, 164.54482, 120, 147.22432, 120, 138.56406, 105, 147.22432, 90, 164.54482, 90, 169, 89, 169, 92, 174, 103, 174, 105, 173.20508, 105, 164.54482, 90, 167.14507, 85.49623, 174, 107, 177, 114, 177, 119, 180.33334, 135, 173.20508, 135, 164.54482, 120, 173.20508, 105, 174, 105, 173.20508, 135, 164.54482, 150, 147.22432, 150, 138.56406, 135, 147.22432, 120, 164.54482, 120, 182, 143, 182, 152, 182.56522, 165, 173.20508, 165, 164.54482, 150, 173.20508, 135, 180.33334, 135, 173.20508, 165, 164.54482, 180, 147.22432, 180, 138.56406, 165, 147.22432, 150, 164.54482, 150, 183, 175, 182, 175, 180.26086, 195, 173.20508, 195, 164.54482, 180, 173.20508, 165, 182.56522, 165, 173.20508, 195, 164.54482, 210, 147.22432, 210, 138.56406, 195, 147.22432, 180, 164.54482, 180, 180, 198, 179, 198, 177, 206, 176, 206, 173, 214, 172, 214, 169.44037, 218.47934, 164.54482, 210, 173.20508, 195, 180.26086, 195, 169.44037, 218.47934, 168, 221, 167, 221, 158, 230, 156, 230, 145.84714, 237.61465, 138.56406, 225, 147.22432, 210, 164.54482, 210)
@@ -511,8 +513,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-6" type="Bone2D" parent="Egg/Skeleton2D" unique_id=328124172]
 position = Vector2(33.361286, 204.6138)
-rotation = -0.5889971
-scale = Vector2(0.9999999, 0.9999999)
+rotation = -0.58899707
+scale = Vector2(0.9999998, 0.9999998)
 rest = Transform2D(0.8314982, -0.5555274, 0.5555274, 0.8314982, 33.361286, 204.6138)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -657,7 +659,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="Egg/Skeleton2D" unique_id=592688100]
 position = Vector2(79.862366, 174.31552)
 rotation = 2.5745244
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(-0.8434794, 0.53716147, -0.53716147, -0.8434794, 79.862366, 174.31552)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -684,7 +686,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="Egg/Skeleton2D" unique_id=2135564552]
 position = Vector2(79.18605, 204.13033)
 rotation = 2.5466495
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999998, 0.9999998)
 rest = Transform2D(-0.8281803, 0.5604617, -0.5604617, -0.8281803, 79.18605, 204.13033)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -750,7 +752,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-24" type="Bone2D" parent="Egg/Skeleton2D" unique_id=921055342]
 position = Vector2(103.29296, 50.966827)
 rotation = 1.582125
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(-0.01132838, 0.9999358, -0.9999358, -0.01132838, 103.29296, 50.966824)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -881,7 +883,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-34" type="Bone2D" parent="Egg/Skeleton2D" unique_id=1631643087]
 position = Vector2(103.11315, 189.05492)
 rotation = 1.5623978
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.00839839, 0.9999647, -0.9999647, 0.00839839, 103.11315, 189.05492)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -1077,6 +1079,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-0" type="RigidBody2D" parent="Egg" unique_id=465819776]
 position = Vector2(37.469044, 66.12019)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
 
@@ -1125,6 +1128,7 @@ metadata/joint_distance = 27.15638
 [node name="Bone-1" type="RigidBody2D" parent="Egg" unique_id=1663935301]
 position = Vector2(34.24638, 93.08468)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
 
@@ -1184,6 +1188,7 @@ metadata/joint_distance = 25.88762
 [node name="Bone-2" type="RigidBody2D" parent="Egg" unique_id=1259680842]
 position = Vector2(32.36073, 118.903534)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
 
@@ -1243,6 +1248,7 @@ metadata/joint_distance = 23.27464
 [node name="Bone-3" type="RigidBody2D" parent="Egg" unique_id=99442733]
 position = Vector2(31.036797, 142.14049)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
 
@@ -1313,6 +1319,7 @@ metadata/joint_distance = 23.880558
 [node name="Bone-4" type="RigidBody2D" parent="Egg" unique_id=810451530]
 position = Vector2(17.692762, 161.94498)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
@@ -1350,6 +1357,7 @@ metadata/joint_distance = 20.741774
 [node name="Bone-5" type="RigidBody2D" parent="Egg" unique_id=959595634]
 position = Vector2(31.191858, 177.69286)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
 
@@ -1420,6 +1428,7 @@ metadata/joint_distance = 27.008215
 [node name="Bone-6" type="RigidBody2D" parent="Egg" unique_id=1166450414]
 position = Vector2(33.361286, 204.6138)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
 
@@ -1468,6 +1477,7 @@ metadata/joint_distance = 26.768423
 [node name="Bone-7" type="RigidBody2D" parent="Egg" unique_id=1286176879]
 position = Vector2(74.3892, 33.36668)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
 
@@ -1527,6 +1537,7 @@ metadata/joint_distance = 25.338285
 [node name="Bone-8" type="RigidBody2D" parent="Egg" unique_id=237072837]
 position = Vector2(55.604164, 50.37113)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
 
@@ -1586,6 +1597,7 @@ metadata/joint_distance = 28.351662
 [node name="Bone-9" type="RigidBody2D" parent="Egg" unique_id=766644969]
 position = Vector2(79.372444, 65.82706)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
 
@@ -1667,6 +1679,7 @@ metadata/joint_distance = 29.696428
 [node name="Bone-10" type="RigidBody2D" parent="Egg" unique_id=1815637440]
 position = Vector2(55.68004, 79.708786)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
@@ -1748,6 +1761,7 @@ metadata/joint_distance = 29.271196
 [node name="Bone-11" type="RigidBody2D" parent="Egg" unique_id=63812374]
 position = Vector2(80.32101, 95.50833)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 11
 metadata/bone_name = &"Bone-11"
 
@@ -1829,6 +1843,7 @@ metadata/joint_distance = 27.560167
 [node name="Bone-12" type="RigidBody2D" parent="Egg" unique_id=2031571475]
 position = Vector2(57.175854, 107.9683)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 12
 metadata/bone_name = &"Bone-12"
 
@@ -1910,6 +1925,7 @@ metadata/joint_distance = 29.999441
 [node name="Bone-13" type="RigidBody2D" parent="Egg" unique_id=45097847]
 position = Vector2(83.18416, 122.91937)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 13
 metadata/bone_name = &"Bone-13"
 
@@ -1991,6 +2007,7 @@ metadata/joint_distance = 22.512295
 [node name="Bone-14" type="RigidBody2D" parent="Egg" unique_id=1602036427]
 position = Vector2(57.913124, 134.23943)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 14
 metadata/bone_name = &"Bone-14"
 
@@ -2072,6 +2089,7 @@ metadata/joint_distance = 26.342253
 [node name="Bone-15" type="RigidBody2D" parent="Egg" unique_id=1615704974]
 position = Vector2(81.77999, 145.38783)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 15
 metadata/bone_name = &"Bone-15"
 
@@ -2153,6 +2171,7 @@ metadata/joint_distance = 28.991179
 [node name="Bone-16" type="RigidBody2D" parent="Egg" unique_id=382759633]
 position = Vector2(56.59012, 161.18213)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 16
 metadata/bone_name = &"Bone-16"
 
@@ -2234,6 +2253,7 @@ metadata/joint_distance = 26.722342
 [node name="Bone-17" type="RigidBody2D" parent="Egg" unique_id=882167492]
 position = Vector2(79.862366, 174.31552)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 17
 metadata/bone_name = &"Bone-17"
 
@@ -2315,6 +2335,7 @@ metadata/joint_distance = 29.822474
 [node name="Bone-18" type="RigidBody2D" parent="Egg" unique_id=1385244564]
 position = Vector2(55.25636, 189.98561)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 18
 metadata/bone_name = &"Bone-18"
 
@@ -2396,6 +2417,7 @@ metadata/joint_distance = 27.797537
 [node name="Bone-19" type="RigidBody2D" parent="Egg" unique_id=97465149]
 position = Vector2(79.18605, 204.13033)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 19
 metadata/bone_name = &"Bone-19"
 
@@ -2477,6 +2499,7 @@ metadata/joint_distance = 26.945526
 [node name="Bone-20" type="RigidBody2D" parent="Egg" unique_id=390325758]
 position = Vector2(54.814396, 220.62357)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 20
 metadata/bone_name = &"Bone-20"
 
@@ -2536,6 +2559,7 @@ metadata/joint_distance = 29.427956
 [node name="Bone-21" type="RigidBody2D" parent="Egg" unique_id=1162923059]
 position = Vector2(78.882576, 231.07414)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 21
 metadata/bone_name = &"Bone-21"
 
@@ -2595,6 +2619,7 @@ metadata/joint_distance = 27.28626
 [node name="Bone-22" type="RigidBody2D" parent="Egg" unique_id=233519131]
 position = Vector2(102.52124, 25.984224)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 22
 metadata/bone_name = &"Bone-22"
 
@@ -2643,6 +2668,7 @@ metadata/joint_distance = 25.406368
 [node name="Bone-23" type="RigidBody2D" parent="Egg" unique_id=1719130741]
 position = Vector2(125.230606, 37.37581)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 23
 metadata/bone_name = &"Bone-23"
 
@@ -2691,6 +2717,7 @@ metadata/joint_distance = 25.806513
 [node name="Bone-24" type="RigidBody2D" parent="Egg" unique_id=1479480163]
 position = Vector2(103.29296, 50.966824)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 24
 metadata/bone_name = &"Bone-24"
 
@@ -2772,6 +2799,7 @@ metadata/joint_distance = 29.847918
 [node name="Bone-25" type="RigidBody2D" parent="Egg" unique_id=1373734250]
 position = Vector2(130.76163, 62.64461)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 25
 metadata/bone_name = &"Bone-25"
 
@@ -2842,6 +2870,7 @@ metadata/joint_distance = 32.215797
 [node name="Bone-26" type="RigidBody2D" parent="Egg" unique_id=618292944]
 position = Vector2(102.953606, 80.921165)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 26
 metadata/bone_name = &"Bone-26"
 
@@ -2923,6 +2952,7 @@ metadata/joint_distance = 26.687693
 [node name="Bone-27" type="RigidBody2D" parent="Egg" unique_id=1111693834]
 position = Vector2(125.930824, 94.496155)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 27
 metadata/bone_name = &"Bone-27"
 
@@ -3004,6 +3034,7 @@ metadata/joint_distance = 27.140432
 [node name="Bone-28" type="RigidBody2D" parent="Egg" unique_id=653174065]
 position = Vector2(101.86975, 110.637726)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 28
 metadata/bone_name = &"Bone-28"
 
@@ -3085,6 +3116,7 @@ metadata/joint_distance = 24.788412
 [node name="Bone-29" type="RigidBody2D" parent="Egg" unique_id=1206132268]
 position = Vector2(124.11442, 121.57574)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 29
 metadata/bone_name = &"Bone-29"
 
@@ -3166,6 +3198,7 @@ metadata/joint_distance = 25.393095
 [node name="Bone-30" type="RigidBody2D" parent="Egg" unique_id=2008523416]
 position = Vector2(98.81538, 131.85173)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 30
 metadata/bone_name = &"Bone-30"
 
@@ -3247,6 +3280,7 @@ metadata/joint_distance = 29.997948
 [node name="Bone-31" type="RigidBody2D" parent="Egg" unique_id=1330778471]
 position = Vector2(124.730156, 146.96136)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 31
 metadata/bone_name = &"Bone-31"
 
@@ -3328,6 +3362,7 @@ metadata/joint_distance = 28.15804
 [node name="Bone-32" type="RigidBody2D" parent="Egg" unique_id=1524920675]
 position = Vector2(102.46043, 159.181)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 32
 metadata/bone_name = &"Bone-32"
 
@@ -3409,6 +3444,7 @@ metadata/joint_distance = 28.806429
 [node name="Bone-33" type="RigidBody2D" parent="Egg" unique_id=1773562110]
 position = Vector2(126.49236, 175.06421)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 33
 metadata/bone_name = &"Bone-33"
 
@@ -3490,6 +3526,7 @@ metadata/joint_distance = 29.4488
 [node name="Bone-34" type="RigidBody2D" parent="Egg" unique_id=1630461013]
 position = Vector2(103.11315, 189.05492)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 34
 metadata/bone_name = &"Bone-34"
 
@@ -3571,6 +3608,7 @@ metadata/joint_distance = 28.87817
 [node name="Bone-35" type="RigidBody2D" parent="Egg" unique_id=805590383]
 position = Vector2(127.51698, 204.49518)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 35
 metadata/bone_name = &"Bone-35"
 
@@ -3652,6 +3690,7 @@ metadata/joint_distance = 25.792753
 [node name="Bone-36" type="RigidBody2D" parent="Egg" unique_id=572755648]
 position = Vector2(103.36487, 219.02602)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 36
 metadata/bone_name = &"Bone-36"
 
@@ -3733,6 +3772,7 @@ metadata/joint_distance = 26.524477
 [node name="Bone-37" type="RigidBody2D" parent="Egg" unique_id=34814550]
 position = Vector2(127.379974, 230.28757)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 37
 metadata/bone_name = &"Bone-37"
 
@@ -3792,6 +3832,7 @@ metadata/joint_distance = 25.814978
 [node name="Bone-38" type="RigidBody2D" parent="Egg" unique_id=1973838119]
 position = Vector2(102.911415, 238.51573)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 38
 metadata/bone_name = &"Bone-38"
 
@@ -3840,6 +3881,7 @@ metadata/joint_distance = 25.814978
 [node name="Bone-39" type="RigidBody2D" parent="Egg" unique_id=165302996]
 position = Vector2(148.48718, 79.114136)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 39
 metadata/bone_name = &"Bone-39"
 
@@ -3888,6 +3930,7 @@ metadata/joint_distance = 26.13549
 [node name="Bone-40" type="RigidBody2D" parent="Egg" unique_id=1617466471]
 position = Vector2(150.78314, 105.14858)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 40
 metadata/bone_name = &"Bone-40"
 
@@ -3958,6 +4001,7 @@ metadata/joint_distance = 22.120293
 [node name="Bone-41" type="RigidBody2D" parent="Egg" unique_id=1366980071]
 position = Vector2(166.48373, 120.73058)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 41
 metadata/bone_name = &"Bone-41"
 
@@ -4006,6 +4050,7 @@ metadata/joint_distance = 27.783218
 [node name="Bone-42" type="RigidBody2D" parent="Egg" unique_id=1344245119]
 position = Vector2(149.9089, 134.46019)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 42
 metadata/bone_name = &"Bone-42"
 
@@ -4087,6 +4132,7 @@ metadata/joint_distance = 22.693151
 [node name="Bone-43" type="RigidBody2D" parent="Egg" unique_id=632492543]
 position = Vector2(167.74945, 148.48495)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 43
 metadata/bone_name = &"Bone-43"
 
@@ -4146,6 +4192,7 @@ metadata/joint_distance = 28.29352
 [node name="Bone-44" type="RigidBody2D" parent="Egg" unique_id=880861288]
 position = Vector2(150.7013, 161.97778)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 44
 metadata/bone_name = &"Bone-44"
 
@@ -4227,6 +4274,7 @@ metadata/joint_distance = 23.308496
 [node name="Bone-45" type="RigidBody2D" parent="Egg" unique_id=1021904943]
 position = Vector2(168.72127, 176.76178)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 45
 metadata/bone_name = &"Bone-45"
 
@@ -4286,6 +4334,7 @@ metadata/joint_distance = 25.745943
 [node name="Bone-46" type="RigidBody2D" parent="Egg" unique_id=585074262]
 position = Vector2(151.79959, 190.60535)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 46
 metadata/bone_name = &"Bone-46"
 
@@ -4367,6 +4416,7 @@ metadata/joint_distance = 20.224775
 [node name="Bone-47" type="RigidBody2D" parent="Egg" unique_id=644706481]
 position = Vector2(168.15572, 202.50151)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 47
 metadata/bone_name = &"Bone-47"
 
@@ -4415,6 +4465,7 @@ metadata/joint_distance = 23.740181
 [node name="Bone-48" type="RigidBody2D" parent="Egg" unique_id=973465739]
 position = Vector2(150.81989, 218.7208)
 mass = 0.1
+script = ExtResource("4_47mic")
 metadata/idx = 48
 metadata/bone_name = &"Bone-48"
 

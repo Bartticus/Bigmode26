@@ -15,7 +15,8 @@ region_rect = Rect2(0, 0, 13, 12)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1584370002]
 unique_name_in_owner = true
-position = Vector2(20, 15)
+position = Vector2(0, -2.145767e-06)
+scale = Vector2(0.3125, 0.28124997)
 enabled = false
 energy = 4.8
 texture = ExtResource("3_ckgvi")
