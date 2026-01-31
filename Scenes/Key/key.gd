@@ -6,10 +6,12 @@ extends Node2D
 @export var max_tug_distance: float = 800
 @export var max_tug_power: float = 3000
 @export var tug_decay: float = 2.5
-@export var max_snap_multiplier: float = 0.75
+@export var max_snap_multiplier: float = 2.0
+@export var snap_timer_wait_time: float = 1.5
 
 var current_body: RigidBody2D
 var dist_to_current_body: float
+
 static var tugged_bodies: Array = [RigidBody2D]
 
 enum Status { IDLE, TUGGING, SNAPPING }
@@ -29,7 +31,7 @@ func set_status(new_status) -> void:
 
 		Status.TUGGING:
 			point_light_2d.enabled = true
-			snap_timer.start()
+			snap_timer.start(snap_timer_wait_time)
 
 
 func _input(event: InputEvent) -> void:
@@ -82,7 +84,7 @@ func move_target():
 	var weight: float = dist_to_current_body / max_tug_distance
 	match status:
 		Status.SNAPPING:
-			force_applied = -(force_applied * calculate_snap_multiplier())
+			force_applied = -(new_force * calculate_snap_multiplier())
 		Status.TUGGING:
 			force_applied = force_applied.lerp(new_force, weight)
 	current_body.apply_force(force_applied)
