@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://m5f1fqhqwv28" path="res://Scenes/Key/key.gd" id="1_b7qx2"]
 [ext_resource type="Texture2D" uid="uid://0ts8n6m43hkh" path="res://Assets/Sprites/FullKeyboardWithNumbers.png" id="2_75pei"]
 [ext_resource type="Texture2D" uid="uid://cyknlaunbfgpd" path="res://icon.svg" id="3_ckgvi"]
-[ext_resource type="Script" uid="uid://b51ncj8sqmmee" path="res://Scenes/Key/debug_line.gd" id="4_75pei"]
+[ext_resource type="Script" path="res://Scenes/Key/debug_line.gd" id="4_75pei"]
+
+[sub_resource type="Curve" id="Curve_75pei"]
+_data = [Vector2(0.145, 0.94382024), 0.0, 0.0, 0, 0, Vector2(0.515, 0.75280905), 0.0, 0.0, 0, 0, Vector2(0.75, 0.17977536), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="Key" type="Node2D" unique_id=1531063233]
+modulate = Color(1, 1, 1, 0.84313726)
 script = ExtResource("1_b7qx2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=726858926]
@@ -30,5 +35,6 @@ one_shot = true
 
 [node name="DebugLine" type="Line2D" parent="." unique_id=300641417]
 unique_name_in_owner = true
-width = 2.0
+width_curve = SubResource("Curve_75pei")
+default_color = Color(0.48235294, 0.6431373, 1, 0.75686276)
 script = ExtResource("4_75pei")

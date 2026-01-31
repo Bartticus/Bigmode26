@@ -86,7 +86,8 @@ func find_and_tug_target() -> void:
 	
 
 func move_bone() -> void:
-	if (current_bone is not Bone):
+	if (current_bone is not Bone || dist_to_current_bone > max_tug_distance):
+		debug_line.clear_points()
 		return
 	var new_force: Vector2 = current_bone.global_position.direction_to(global_position) * calculate_tugging_power()
 	var weight: float = dist_to_current_bone / max_tug_distance
