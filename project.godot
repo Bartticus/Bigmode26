@@ -36,6 +36,7 @@ enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
 
 [physics]
 
+common/physics_ticks_per_second=120
 3d/physics_engine="Jolt Physics"
 2d/solver/solver_iterations=128
 2d/solver/contact_max_allowed_penetration=0.01
