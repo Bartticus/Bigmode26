@@ -8,10 +8,10 @@
 
 [node name="FullKeeb" type="Node2D" unique_id=339941415]
 script = ExtResource("1_pfsk0")
-x_spacing = 192.0
-x_offset = 83.0
-y_spacing = 300.0
-y_offset = 70.0
+x_spacing = 180.0
+x_offset = 145.0
+y_spacing = 250.0
+y_offset = 165.0
 snap_keys_to_position = true
 
 [node name="NumberRow" parent="." unique_id=1030793946 instance=ExtResource("2_2txns")]

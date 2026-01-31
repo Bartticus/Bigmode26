@@ -1,4 +1,5 @@
 @tool
+class_name FullKeeb
 extends Node2D
 
 @onready var number_row: Node2D = %NumberRow
