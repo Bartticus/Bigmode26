@@ -53,13 +53,14 @@ func find_closest_bone() -> void:
 	var blob_bones = Global.blob.bodies
 	for i in blob_bones.size():
 		var bone = blob_bones[i]
+		var dist_to_bone: float = global_position.distance_to(bone.global_position)
 		if bone is Bone:
-			if (bone.status != Bone.Status.FREE) && (bone != current_bone):
-				continue
-			var dist_to_bone: float = global_position.distance_to(bone.global_position)
 			if i == 0:
 				shortest_dist = dist_to_bone
 				closest_bone = bone
+				
+			if (bone.status != Bone.Status.FREE) && (bone != current_bone):
+				continue
 			
 			if dist_to_bone < shortest_dist:
 				shortest_dist = dist_to_bone
