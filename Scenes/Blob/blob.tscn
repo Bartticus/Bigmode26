@@ -474,11 +474,6 @@ metadata/_local_pose_override_enabled_ = true
 position = Vector2(31.036797, 142.14049)
 rotation = 0.6404046
 rest = Transform2D(0.8018541, 0.59751993, -0.59751993, 0.8018541, 31.036797, 142.14049)
-[node name="Bone-3" type="Bone2D" parent="Egg/Skeleton2D" unique_id=367600315]
-position = Vector2(25.150635, 143.30371)
-rotation = 0.6803466
-scale = Vector2(0.9999998, 0.9999998)
-rest = Transform2D(0.77735496, 0.62906224, -0.62906224, 0.77735496, 25.150635, 143.30371)
 auto_calculate_length_and_angle = false
 length = 30.0
 bone_angle = 0.0
@@ -517,7 +512,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-6" type="Bone2D" parent="Egg/Skeleton2D" unique_id=328124172]
 position = Vector2(33.361286, 204.6138)
 rotation = -0.5889971
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.8314982, -0.5555274, 0.5555274, 0.8314982, 33.361286, 204.6138)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -544,7 +539,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="Egg/Skeleton2D" unique_id=430953502]
 position = Vector2(55.604164, 50.37113)
 rotation = -0.7356875
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.74136955, -0.671097, 0.671097, 0.74136955, 55.604164, 50.37113)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -662,7 +657,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="Egg/Skeleton2D" unique_id=592688100]
 position = Vector2(79.862366, 174.31552)
 rotation = 2.5745244
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(-0.8434794, 0.53716147, -0.53716147, -0.8434794, 79.862366, 174.31552)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -689,7 +684,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="Egg/Skeleton2D" unique_id=2135564552]
 position = Vector2(79.18605, 204.13033)
 rotation = 2.5466495
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(-0.8281803, 0.5604617, -0.5604617, -0.8281803, 79.18605, 204.13033)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -755,7 +750,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-24" type="Bone2D" parent="Egg/Skeleton2D" unique_id=921055342]
 position = Vector2(103.29296, 50.966827)
 rotation = 1.582125
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(-0.01132838, 0.9999358, -0.9999358, -0.01132838, 103.29296, 50.966824)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -886,7 +881,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-34" type="Bone2D" parent="Egg/Skeleton2D" unique_id=1631643087]
 position = Vector2(103.11315, 189.05492)
 rotation = 1.5623978
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.00839839, 0.9999647, -0.9999647, 0.00839839, 103.11315, 189.05492)
 auto_calculate_length_and_angle = false
 length = 30.0
@@ -1163,7 +1158,6 @@ length = 0.0
 stiffness = 10.0
 damping = 0.01
 metadata/joint_distance = 25.264921
-metadata/joint_distance = 27.343139999999998
 
 [node name="Joint2D-Bone-1-Bone-12" type="DampedSpringJoint2D" parent="Egg/Bone-1" unique_id=1629347793]
 visible = false
@@ -1175,7 +1169,6 @@ length = 0.0
 stiffness = 10.0
 damping = 0.01
 metadata/joint_distance = 27.336477
-metadata/joint_distance = 27.343139999999998
 
 [node name="Joint2D-Bone-1-Bone-2" type="DampedSpringJoint2D" parent="Egg/Bone-1" unique_id=708344257]
 visible = false
@@ -1718,7 +1711,6 @@ length = 0.0
 stiffness = 10.0
 damping = 0.01
 metadata/joint_distance = 25.264921
-metadata/joint_distance = 27.343139999999998
 
 [node name="Joint2D-Bone-10-Bone-12" type="DampedSpringJoint2D" parent="Egg/Bone-10" unique_id=2001727135]
 visible = false
@@ -1859,7 +1851,6 @@ length = 0.0
 stiffness = 10.0
 damping = 0.01
 metadata/joint_distance = 27.336477
-metadata/joint_distance = 27.343139999999998
 
 [node name="Joint2D-Bone-12-Bone-10" type="DampedSpringJoint2D" parent="Egg/Bone-12" unique_id=1070211161]
 visible = false
