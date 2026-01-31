@@ -36,5 +36,5 @@ one_shot = true
 [node name="DebugLine" type="Line2D" parent="." unique_id=300641417]
 unique_name_in_owner = true
 width_curve = SubResource("Curve_75pei")
-default_color = Color(0.48235294, 0.6431373, 1, 0.75686276)
+default_color = Color(0.48235294, 0.6431373, 1, 0.16078432)
 script = ExtResource("4_75pei")
