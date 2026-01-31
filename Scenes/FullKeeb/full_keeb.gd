@@ -30,7 +30,6 @@ func set_key_positions():
 			var key: Node2D = row_keys[j]
 			key.position.x = x_spacing * j + x_offset
 			key.position.y = y_spacing * i + y_offset
-			#print(key.position)
 
 func _ready() -> void:
 	set_key_positions()

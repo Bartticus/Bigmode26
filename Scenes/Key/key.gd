@@ -11,6 +11,7 @@ extends Node2D
 
 var current_bone: Bone : set = set_current_bone
 var dist_to_current_bone: float
+var force_applied: Vector2
 
 static var tugged_bodies: Array = [Bone]
 
@@ -28,7 +29,6 @@ func set_status(new_status) -> void:
 				tugged_bodies.erase(current_bone)
 			current_bone = null
 			snap_timer.stop()
-
 		Status.TUGGING:
 			point_light_2d.enabled = true
 			snap_timer.start(snap_timer_wait_time)
@@ -76,13 +76,10 @@ func set_current_bone(new_current_bone) -> void:
 	
 	current_bone = new_current_bone
 
-
 func find_and_tug_target() -> void:
 	find_closest_bone()
 	move_bone()
 	
-
-var force_applied: Vector2
 func move_bone():
 	var new_force: Vector2 = current_bone.global_position.direction_to(global_position) * calculate_tugging_power()
 	var weight: float = dist_to_current_bone / max_tug_distance
@@ -93,14 +90,13 @@ func move_bone():
 			force_applied = force_applied.lerp(new_force, weight)
 	current_bone.apply_force(force_applied)
 
-
 func calculate_snap_multiplier() -> float:
 	return (max_snap_multiplier * ((snap_timer.wait_time - snap_timer.time_left) / snap_timer.wait_time))
 
 func snap_away() -> void:
 	move_bone()
 	status = Status.IDLE
-	
+
 # Tugging power drops off exponentially
 func calculate_tugging_power() -> float:
 	if (dist_to_current_bone >= max_tug_distance):
@@ -108,7 +104,6 @@ func calculate_tugging_power() -> float:
 
 	var power_multiplier = dist_to_current_bone / max_tug_distance
 	var tugging_power = max_tug_power * exp(-tug_decay * power_multiplier)
-
 	return tugging_power
 
 func _physics_process(_delta: float) -> void:
