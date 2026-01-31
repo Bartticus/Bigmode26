@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bohriipkjtw0v"
-path="res://.godot/imported/Blobbert_small.png-290494ff1d30a8eb1f62a57c52a8fbb6.ctex"
+uid="uid://57ohn72dnhhh"
+path="res://.godot/imported/AltFaces_Yikes.png-ae269757e424bba93382657482e3c06b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Blobbert_small.png"
-dest_files=["res://.godot/imported/Blobbert_small.png-290494ff1d30a8eb1f62a57c52a8fbb6.ctex"]
+source_file="res://Assets/Sprites/AltFaces_Yikes.png"
+dest_files=["res://.godot/imported/AltFaces_Yikes.png-ae269757e424bba93382657482e3c06b.ctex"]
 
 [params]
 

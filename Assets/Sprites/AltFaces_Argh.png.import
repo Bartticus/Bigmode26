@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wihn2gxxjpyi"
-path="res://.godot/imported/face circle.png-db16389babd8763cfc32d69e043f8874.ctex"
+uid="uid://b8kau5csidc27"
+path="res://.godot/imported/AltFaces_Argh.png-9040bb197d2628a1478238c1351becce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/face circle.png"
-dest_files=["res://.godot/imported/face circle.png-db16389babd8763cfc32d69e043f8874.ctex"]
+source_file="res://Assets/Sprites/AltFaces_Argh.png"
+dest_files=["res://.godot/imported/AltFaces_Argh.png-9040bb197d2628a1478238c1351becce.ctex"]
 
 [params]
 

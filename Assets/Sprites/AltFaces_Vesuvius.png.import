@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byndedm4lq454"
-path="res://.godot/imported/BlobbertHalf.png-cd36c0b206a3fb50b8abeec3aeb39af3.ctex"
+uid="uid://dfr6tcqpctvhw"
+path="res://.godot/imported/AltFaces_Vesuvius.png-2001970ccb695c327ebec564f35a128d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlobbertHalf.png"
-dest_files=["res://.godot/imported/BlobbertHalf.png-cd36c0b206a3fb50b8abeec3aeb39af3.ctex"]
+source_file="res://Assets/Sprites/AltFaces_Vesuvius.png"
+dest_files=["res://.godot/imported/AltFaces_Vesuvius.png-2001970ccb695c327ebec564f35a128d.ctex"]
 
 [params]
 
